@@ -1,39 +1,36 @@
 ---
 import '@fontsource/imprima/400.css';
 ---
-<html lang="en">
+<html lang="en" class="bg-beige text-amarillo">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Jorge Valdez @georch | Senior Frontend developer and Drupal ninja living in Guadalajara, Mexico</title>
+    <title>Jorge Valdez @georch | Senior Frontend developer living in Guadalajara, Mexico</title>
   </head>
   <body>
-    <header>
-      <div>
+    <div class="px-10 max-w-xl mx-auto">
+      <header class="py-8">
+        <h1 class="text-center text-gris text-6xl font-serif drop-shadow-[0_1px_1px_rgba(255,255,255,1)]">Jorge Valdez</h1>
+      </header>
+  
+      <div role="main" class="main-content">
         <div>
-          <h1 class="title">georch</h1>
+          <p>I'm co-founder of Octahedroid, a professional services and consulting agency specializing in modern web technology services, front-end tools, cloud native architectures, automation and CMS integrations.</p>
+        </div>
+  
+        <div class="px-16">
+          <p>Twitter: <a href="https://www.twitter.com/georch">@georch</a></p>
+          <p>GitHub: <a href="https://github.com/georch">georch</a></p>
+          <p>LinkedIn: <a href="https://mx.linkedin.com/in/georch">Jorge Valdez</a></p>
+          <p>Website: <a href="https://www.octahedroid.com">octahedroid.com</a></p>
         </div>
       </div>
-    </header>
-
-    <div role="main" class="main-content">
-      <div>
-        <p>Drupal ninja, passionate developer. Damn, How lucky am I? I really love what I do for living!</p>
-        <p>I'm co-founder of Octahedroid, a professional services and consulting agency specializing in modern decoupled technology services, front-end tools, cloud native architectures, automation and CMS integrations.</p>
-      </div>
-
-      <div>
-        <p>Twitter: <a href="https://www.twitter.com/georch">@georch</a></p>
-        <p>GitHub: <a href="https://github.com/georch">georch</a></p>
-        <p>LinkedIn: <a href="https://mx.linkedin.com/in/georch">Jorge Valdez</a></p>
-        <p>Website: <a href="https://www.octahedroid.com">octahedroid.com</a></p>
-      </div>
+      
+      <footer class="py-8 text-center text-gris text-xl font-serif">
+        Guadalajara, Mexico 2025.
+      </footer>
     </div>
-    
-    <footer>
-      Guadalajara, Mexico 2025.
-    </footer>
   </body>
 </html>
