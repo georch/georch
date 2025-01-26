@@ -1,0 +1,19 @@
+{
+  "name": "@georch/website",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.5",
+    "@fontsource/imprima": "^5.1.1",
+    "astro": "^5.1.9",
+    "tailwindcss": "^3.4.17"
+  }
+}
