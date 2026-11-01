@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme inline {
+    --font-serif: var(--font-imprima);
+
+    /* Text colors keep at least 5:1 contrast on beige and arena (WCAG AA). */
+    --color-beige: #A1A194;
+    --color-arena: #BDBDB1;
+    --color-negro: #1C1E1D;
+    --color-gris: #2B2E2D;
+    --color-vino: #5A0322;
+}
+
+@layer base {
+    p {
+        @apply mb-4;
+    }
+
+    a {
+        @apply text-vino underline underline-offset-2;
+    }
+
+    a:hover,
+    a:focus-visible {
+        @apply text-negro;
+    }
+}

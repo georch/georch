@@ -1,35 +1,50 @@
 ---
-import '@fontsource/imprima/400.css';
+import '../css/main.css';
+import { Font } from 'astro:assets';
+
+const title = 'Jorge Valdez @georch | Co-founder of Octahedroid, living in Guadalajara, Mexico';
+const description = 'Jorge Valdez is co-founder of Octahedroid, a consulting agency specializing in modern web technology, front-end tools, cloud native architectures, automation and CMS integrations.';
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
-<html lang="en" class="bg-beige text-amarillo">
+<!doctype html>
+<html lang="en" class="bg-beige text-negro">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Jorge Valdez @georch | Senior Frontend developer living in Guadalajara, Mexico</title>
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Jorge Valdez" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@georch" />
+    <Font cssVariable="--font-imprima" preload />
   </head>
-  <body>
-    <div class="px-10 max-w-xl mx-auto">
+  <body class="min-h-dvh flex items-center justify-center px-4 py-8">
+    <div class="w-full max-w-xl px-6 sm:px-10 bg-arena border border-negro/20 rounded-md">
       <header class="py-8">
         <h1 class="text-center text-gris text-6xl font-serif drop-shadow-[0_1px_1px_rgba(255,255,255,1)]">Jorge Valdez</h1>
       </header>
-  
-      <div role="main" class="main-content">
-        <div>
-          <p>I'm co-founder of Octahedroid, a professional services and consulting agency specializing in modern web technology services, front-end tools, cloud native architectures, automation and CMS integrations.</p>
-        </div>
-  
-        <div class="px-16">
-          <p>Twitter: <a href="https://www.twitter.com/georch">@georch</a></p>
-          <p>GitHub: <a href="https://github.com/georch">georch</a></p>
-          <p>LinkedIn: <a href="https://mx.linkedin.com/in/georch">Jorge Valdez</a></p>
-          <p>Website: <a href="https://www.octahedroid.com">octahedroid.com</a></p>
-        </div>
-      </div>
-      
+
+      <main>
+        <p>I'm co-founder of Octahedroid, a professional services and consulting agency specializing in modern web technology services, front-end tools, cloud native architectures, automation and CMS integrations.</p>
+
+        <ul>
+          <li class="mb-4">Twitter: <a href="https://x.com/georch" rel="me">@georch</a></li>
+          <li class="mb-4">GitHub: <a href="https://github.com/georch" rel="me">georch</a></li>
+          <li class="mb-4">LinkedIn: <a href="https://www.linkedin.com/in/georch" rel="me">Jorge Valdez</a></li>
+          <li class="mb-4">Website: <a href="https://www.octahedroid.com">octahedroid.com</a></li>
+        </ul>
+      </main>
+
       <footer class="py-8 text-center text-gris text-xl font-serif">
-        Guadalajara, Mexico 2025.
+        Guadalajara, Mexico {new Date().getFullYear()}.
       </footer>
     </div>
   </body>

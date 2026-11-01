@@ -1,19 +1,25 @@
 {
-  "name": "@georch/website",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "georch",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "description": "Personal website of Jorge Valdez",
+  "homepage": "https://georch.com",
+  "author": "Jorge Valdez <georch@gmail.com>",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.5",
-    "@fontsource/imprima": "^5.1.1",
-    "astro": "^5.1.9",
-    "tailwindcss": "^3.4.17"
+    "@astrojs/sitemap": "^3.7.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.4.4",
+    "tailwindcss": "^4.3.3"
   }
 }
