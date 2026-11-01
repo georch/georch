@@ -1,54 +1,48 @@
-# georch
+# Hi, I'm Jorge 👋
 
-Repository for [georch.com](https://georch.com), the personal website of Jorge Valdez.
+**Co-founder at [Octahedroid](https://octahedroid.com). Web developer since 2000. People-first, always.**
 
-Single-page static site built with [Astro](https://astro.build).
+For 26 years I've been building for the web, from table layouts and dial-up to cloud-native platforms and AI-assisted workflows. That path led me to co-found **Octahedroid**, a digital agency, where I've helped grow a team of **16+ developers**. The thing I'm proudest of isn't a project we shipped. It's a culture where people do their best work because they feel safe, trusted and heard.
 
-## Stack
+[![Octahedroid](https://img.shields.io/badge/Octahedroid-111111?style=flat&logo=About.me&logoColor=white)](https://octahedroid.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/georch)
 
-- **Astro 7**: generates static HTML, with no JavaScript in the browser.
-- **Tailwind CSS 4**: styles live in the classes of the page; the theme (colors `beige` for the page, `arena` for the card, `negro`, `gris`, `vino` and the font; text colors keep at least 5:1 contrast on both backgrounds) and the shared base styles are in `src/css/main.css`.
-- **Imprima**: Fontsource font downloaded at build time and served from the site itself with the Astro fonts API (CSS variable `--font-imprima`).
-- **SEO**: description, canonical link and social preview (Open Graph); `sitemap-index.xml` generated with `@astrojs/sitemap` and `robots.txt`.
+---
 
-Requires Node.js 24 or later (`engines` in `package.json`; `.nvmrc` pins version 24 and `.npmrc` makes the install fail on older versions).
+## 🎬 How I got here
 
-## Structure
+It all began with **Macromedia Flash**. What started as making things move on a screen turned into ActionScript, and ActionScript taught me the coding principles I still rely on today. Just as important, it connected me with a community of great people who shaped how I think about building, sharing and learning together.
 
-```
-public/                Files copied as-is to the generated site
-  favicon.svg          Site icon
-  robots.txt           Tells search engines where the sitemap is
-src/
-  components/Icon.astro  Inline Tabler icons for the links list
-  css/main.css         Tailwind, theme and base styles
-  pages/index.astro    Home page content and metadata
-astro.config.mjs       Domain, font, sitemap and Tailwind
-```
+From there I spent years in **marketing agencies**, working side by side with strategists, creatives and brand teams. That's where I learned that great work starts long before the first line of code: in planning, in creative thinking and in understanding a brand's identity. Most of all, it gave me the soft skills I lean on every day and a deep respect for how people communicate, collaborate and make ideas happen together.
 
-## Editing content
+---
 
-- **Home page text, links and `description`**: `src/pages/index.astro`; each link in `links` picks an icon by name from `src/components/Icon.astro` (add new ones from [Tabler Icons](https://tabler.io/icons), outline style).
-- **Colors or font**: `@theme` in `src/css/main.css` and `fonts` in `astro.config.mjs`.
+## 💛 How we run Octahedroid: human-first
 
-## Development
+- **People before process.** Process exists to serve the team, never the other way around.
+- **Psychological safety is the foundation.** Asking "dumb" questions and admitting mistakes are signs of a healthy team.
+- **Growth is part of the job.** Every person on the team has a path, a mentor and time to learn.
+- **Trust by default.** Clear outcomes, real autonomy, no micromanagement.
+- **Sustainable pace.** Burnout is a bug in the system, not a badge of honor.
+- **Feedback both ways.** I ask for it as often as I give it.
 
-```bash
-npm install
-npm run dev       # http://localhost:4321
-npm run build     # generates dist/
-npm run preview   # serves dist/ locally
-```
+> Great software comes from teams that feel safe to think out loud.
 
-## Deployment
+---
 
-The site is published on [OpenShip](https://openship.io) as a **static site**:
+## 🛠️ Tech I've worked with over the years
 
-| Option | Value |
-| --- | --- |
-| Node version | 24 |
-| Install command | `npm ci` |
-| Build command | `npm run build` |
-| Publish directory | `dist` |
+**Today:** React · Astro · Node.js · PHP · Drupal · Laravel · Cloud & CI/CD · AI-assisted development  
+**Foundations:** HTML · CSS · JavaScript · SQL · Linux · Git · Flash & ActionScript (and, yes, FTP deploys and jQuery)
 
-OpenShip's static mode answers any unknown path with `index.html`, so the site has no 404 page. That's fine for a single page (the canonical link always points to `https://georch.com/`); if the site grows to several pages, publish it with a `Dockerfile` and Nginx, like airesdemexico.
+---
+
+## 🌱 Right now
+
+- 🚀 Growing Octahedroid's team of 16+ and the leaders within it
+- 📚 Exploring how AI changes the way agencies deliver and teams learn
+- 🤝 Open to talking about agency operations, engineering culture and mentoring
+
+---
+
+<sub>Built a lot of things. Still most excited about the people I build them with.</sub>
