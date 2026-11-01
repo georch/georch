@@ -1,10 +1,18 @@
 ---
 import '../css/main.css';
 import { Font } from 'astro:assets';
+import Icon from '../components/Icon.astro';
 
 const title = 'Jorge Valdez @georch | Co-founder of Octahedroid, living in Guadalajara, Mexico';
 const description = 'Jorge Valdez is co-founder of Octahedroid, a consulting agency specializing in modern web technology, front-end tools, cloud native architectures, automation and CMS integrations.';
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+
+const links = [
+  { label: 'X', icon: 'x', href: 'https://x.com/georch', text: '@georch', me: true },
+  { label: 'GitHub', icon: 'github', href: 'https://github.com/georch', text: 'georch', me: true },
+  { label: 'LinkedIn', icon: 'linkedin', href: 'https://www.linkedin.com/in/georch', text: 'Jorge Valdez', me: true },
+  { label: 'Website', icon: 'world', href: 'https://www.octahedroid.com', text: 'octahedroid.com', me: false },
+] as const;
 ---
 <!doctype html>
 <html lang="en" class="bg-beige text-negro">
@@ -36,10 +44,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
         <p>I'm co-founder of Octahedroid, a professional services and consulting agency specializing in modern web technology services, front-end tools, cloud native architectures, automation and CMS integrations.</p>
 
         <ul>
-          <li class="mb-4">Twitter: <a href="https://x.com/georch" rel="me">@georch</a></li>
-          <li class="mb-4">GitHub: <a href="https://github.com/georch" rel="me">georch</a></li>
-          <li class="mb-4">LinkedIn: <a href="https://www.linkedin.com/in/georch" rel="me">Jorge Valdez</a></li>
-          <li class="mb-4">Website: <a href="https://www.octahedroid.com">octahedroid.com</a></li>
+          {links.map(({ label, icon, href, text, me }) => (
+            <li class="mb-4 flex items-center gap-3">
+              <Icon name={icon} class="size-6 shrink-0 text-gris" />
+              <span>{label}: <a href={href} rel={me ? 'me' : undefined}>{text}</a></span>
+            </li>
+          ))}
         </ul>
       </main>
 

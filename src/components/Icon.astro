@@ -1,0 +1,46 @@
+---
+// Outline icons from Tabler Icons (MIT, https://tabler.io/icons), inlined so
+// the page needs no icon package or JavaScript.
+const icons = {
+  x: [
+    'M4 4l11.733 16h4.267l-11.733 -16l-4.267 0',
+    'M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772',
+  ],
+  github: ['M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5'],
+  linkedin: [
+    'M8 11v5',
+    'M8 8v.01',
+    'M12 16v-5',
+    'M16 16v-3a2 2 0 1 0 -4 0',
+    'M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10',
+  ],
+  world: [
+    'M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0',
+    'M3.6 9h16.8',
+    'M3.6 15h16.8',
+    'M11.5 3a17 17 0 0 0 0 18',
+    'M12.5 3a17 17 0 0 1 0 18',
+  ],
+};
+
+interface Props {
+  name: keyof typeof icons;
+  class?: string;
+}
+
+const { name, class: className } = Astro.props;
+---
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.75"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+  class={className}
+>
+  {icons[name].map((d) => <path d={d} />)}
+</svg>

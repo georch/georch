@@ -20,6 +20,7 @@ public/                Files copied as-is to the generated site
   favicon.svg          Site icon
   robots.txt           Tells search engines where the sitemap is
 src/
+  components/Icon.astro  Inline Tabler icons for the links list
   css/main.css         Tailwind, theme and base styles
   pages/index.astro    Home page content and metadata
 astro.config.mjs       Domain, font, sitemap and Tailwind
@@ -27,7 +28,7 @@ astro.config.mjs       Domain, font, sitemap and Tailwind
 
 ## Editing content
 
-- **Home page text, links and `description`**: `src/pages/index.astro`.
+- **Home page text, links and `description`**: `src/pages/index.astro`; each link in `links` picks an icon by name from `src/components/Icon.astro` (add new ones from [Tabler Icons](https://tabler.io/icons), outline style).
 - **Colors or font**: `@theme` in `src/css/main.css` and `fonts` in `astro.config.mjs`.
 
 ## Development
